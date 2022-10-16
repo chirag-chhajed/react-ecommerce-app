@@ -3,6 +3,7 @@ import Card from "./Card";
 // import {nanoid} from 'nanoid'
 import jordan from "../data/jordan";
 import yeezy from "../data/yeezy";
+import ProductRow from "./ProductRow";
 
 export default function Main(){
     const card1 = jordan.map(e =>{
@@ -30,15 +31,23 @@ export default function Main(){
         )
     })
     return(
-        <main className="w-full bg-green-400 px-6 py-4 flex flex-col gap-4">
-            <h2 className="uppercase font-extrabold mb-4 text-2xl">jordans</h2>
-            <section className="grid grid-flow-col  gap-6 overflow-x-scroll">
-                {card1}
-            </section>
-            <h2 className="uppercase font-extrabold mb-4 text-2xl">yeezy</h2>
-            <section className="grid grid-flow-col  gap-6 overflow-x-scroll">
-                {card2}
-            </section>
+        <main className="w-full bg-main px-6 py-4 flex flex-col gap-16">
+            <ProductRow 
+                brand="jordan"
+                card={card1}
+            />
+            <ProductRow
+                brand="yeezy"
+                card={card2}
+            />
+            <ProductRow 
+                brand="jordan"
+                card={card1}
+            />
+            <ProductRow
+                brand="yeezy"
+                card={card2}
+            />
             
         </main>
     )
