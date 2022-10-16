@@ -3,7 +3,7 @@ import React from "react";
 export default function Card(props){
 
     return(
-        <div className="h-80 w-60 bg-red-400 rounded-md flex flex-col gap-4 ">
+        <div className="h-80 w-60 bg-cardbg rounded-md flex flex-col gap-4 ">
             <div className="w-11/12 h-1/2 mx-auto my-4">
                 <img 
                     src={props.image} 
