@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "./Components/Header";
-import Main from "./Components/Main";
+import { Switch, Route } from "react-router-dom"
+
 
 function App() {
   useEffect(() => {
@@ -18,8 +19,17 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Main/>
+      <Header />
+      
+      {/* <Switch>
+        <Route exact path="/">
+          <Products/>
+        </Route>
+
+        <Route path="/cart">
+          <Cart/>
+        </Route>
+      </Switch> */}
     </>
   );
 }
