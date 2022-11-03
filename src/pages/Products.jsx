@@ -1,10 +1,10 @@
 import React from "react";
-import image from "../assets/Jordans/lows/image.avif"
+import Card from "../Components/Card";
 
 export default function Products(){
     return(
         <>
-            <img src={image} alt="" width={"200px"} />
+            <Card/>
         </>
     )
 }

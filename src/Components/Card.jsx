@@ -1,27 +1,29 @@
-// import React from "react";
+import React from "react";
+import image from "../assets/Jordans/lows/image.avif"
+export default function Card() {
 
-// export default function Card(props){
+    return (
+        <div className="h-96 w-72 bg-cardbg rounded-2xl pt-4 flex flex-col gap-4">
+            <div className="h-40 w-64  mx-auto rounded-md">
+                <img src={image} alt="image" className="h-full w-full object-contain " />
+            </div>
+            <div className="text-center font-bold px-6">
+                <h2>NIKE</h2>
+                <h3>Air Jordan 1 Low SE Crater Grey University Blue</h3>
+                <br />
+                <h3 className="text-left">Rs. 14,999.00</h3>
+            </div>
+            <div className="flex gap-4 justify-center">
+                <button><i class="ri-add-circle-line ri-2x"></i></button>
+                <button><i class="ri-heart-line ri-2x"></i></button>
+            </div>
 
-//     return(
-//         <div className="h-80 w-60 bg-cardbg rounded-md flex flex-col gap-4 ">
-//             <div className="w-11/12 h-1/2 mx-auto my-4">
-//                 <img 
-//                     src={props.image} 
-//                     alt="img"
-//                     className="w-full h-full object-contain"
-//                     />
-//                 <figcaption className="text-center font-bold">{props.brand}</figcaption>
-//             </div>
-//             <div className="w-11/12 h-1/2 mx-auto flex flex-col gap-4">
-//                 <h3 className="font-semibold">{props.productName}</h3>
-//                 <div className="flex justify-between pr-2">
-//                     <h4 className="font-bold">Rs. {props.price}.00</h4>
-//                     <button className="bg-white p-1 rounded-lg transition hover:scale-110"><i class="gg-shopping-bag"></i></button>
-//                 </div>
-                
-//             </div>
-            
+        </div>
 
-//         </div>
-//     );
-// }
+
+
+    );
+}
+// Nike
+// Air Jordan 1 Low SE Crater Grey University Blue
+// Rs. 14,999.00Nike
