@@ -5,6 +5,7 @@ import { Context } from "../Context";
 
 export default function Products(){
    const {allProducts} = useContext(Context)
+   console.log(allProducts.map(e => e.isFavourite))
    const products = allProducts.map( product => (
     
     <Card 

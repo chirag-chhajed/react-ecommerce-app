@@ -5,11 +5,23 @@ const Context = React.createContext()
 
 function ContextProvider({children}){
     const [allProducts,setAllProducts] = useState(data)
-    console.log(allProducts)
+
+    function toggleFavorite(id){
+
+        const updatedArr = allProducts.map(product => {
+            if(product.id === id){
+                
+                return{...product,isFavourite: !product.isFavourite}
+            }
+            return product
+        })
+        setAllProducts(updatedArr)
+    }
     return(
         <Context.Provider value={{
             allProducts,
-            setAllProducts
+            setAllProducts,
+            toggleFavorite
         }}>
             {children}
         </Context.Provider>
