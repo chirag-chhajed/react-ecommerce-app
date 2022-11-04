@@ -14,6 +14,7 @@ export default function Products(){
         brand={product.brand} 
         description={product.description}
         price={product.price}
+        isFavourite={product.isFavourite}
     />
    ))
    

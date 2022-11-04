@@ -5,14 +5,7 @@ import { Context } from "../Context";
 export default function Card(props) {
     const {brand,description,price,id,image,isFavourite} = props
     const {toggleFavorite} = useContext(Context)
-    // function heartIcon() {
-    //     if(isFavourite) {
-    //         return <i className="ri-heart-fill favorite" onClick={() => toggleFavorite(img.id)}></i>
-    //     } if(!isFavourite) {
-    //         return <i className="ri-heart-line favorite" onClick={() => toggleFavorite(img.id)}></i>
-    //     }
-    // }
-    const heartIcon = !isFavourite 
+    const heartIcon = isFavourite 
                             ? <button><i className="ri-heart-fill ri-2x" onClick={() => toggleFavorite(id)}></i></button>
                             : <button><i className="ri-heart-line ri-2x" onClick={() => toggleFavorite(id)}></i></button>
     
