@@ -5,16 +5,17 @@ import { Context } from "../Context";
 
 export default function Products(){
    const {allProducts} = useContext(Context)
-   console.log(allProducts.map(e => e.isFavourite))
    const products = allProducts.map( product => (
     
     <Card 
-        id={product.id}
-        image={product.image}
-        brand={product.brand} 
-        description={product.description}
-        price={product.price}
-        isFavourite={product.isFavourite}
+        // id={product.id}
+        // image={product.image}
+        // brand={product.brand} 
+        // description={product.description}
+        // price={product.price}
+        // isFavourite={product.isFavourite}
+        // alreadyInCart={product.alreadyInCart}
+        {...product}
     />
    ))
    

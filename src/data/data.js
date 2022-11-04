@@ -9,6 +9,7 @@ export default [
         type: "Jordans Low",
         price: "14,999",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     },
     {
@@ -18,6 +19,7 @@ export default [
         type: "Jordans Low",
         price: "15,999",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     },
     {
@@ -27,6 +29,7 @@ export default [
         type: "Jordans Low",
         price: "15,999",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     },
     {
@@ -36,6 +39,7 @@ export default [
         type: "Jordans Low",
         price: "15,999",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     },
     {
@@ -45,6 +49,7 @@ export default [
         type: "Jordans Low",
         price: "16,499",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     },
     {
@@ -54,6 +59,7 @@ export default [
         type: "Jordans Low",
         price: "16,999",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     },
     {
@@ -63,6 +69,7 @@ export default [
         type: "Jordans Low",
         price: "19,999",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     },
     {
@@ -72,6 +79,7 @@ export default [
         type: "Jordans Low",
         price: "17,999",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     },
     {
@@ -81,6 +89,7 @@ export default [
         type: "Jordans Low",
         price: "17,999",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     },
     {
@@ -90,6 +99,7 @@ export default [
         type: "Jordans Low",
         price: "17,999",
         isFavourite: false,
+        alreadyInCart: false,
         id: nanoid()
     }
 ]
