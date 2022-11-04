@@ -1,16 +1,22 @@
-import React from "react";
+import React,{useContext
+} from "react";
 import Card from "../Components/Card";
-import data from "../data/data";
-// import images from "../assets/Jordans/lows/jlow1.atif"
+import { Context } from "../Context";
 
 export default function Products(){
-    const products = data.map(e => {return <Card id={e.id} 
-        image={e.image}
-        description={e.description} 
-        brand={e.brand} 
-        price={e.price} 
+   const {allProducts} = useContext(Context)
+   const products = allProducts.map( product => (
+    
+    <Card 
+        id={product.id}
+        image={product.image}
+        brand={product.brand} 
+        description={product.description}
+        price={product.price}
     />
-})
+   ))
+   
+   
     return(
         <main className="flex flex-wrap gap-4 m-2">
             {products}
