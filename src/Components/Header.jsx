@@ -1,9 +1,15 @@
-import React from "react";
+import React,{useContext} from "react";
 import Shoe from '../assets/shoe.png'
 import { Link } from "react-router-dom";
-
+import { Context } from "../Context";
 
 export default function Header() {
+    const {cartItems} = useContext(Context)
+    
+    const cartLogo = cartItems.length > 0 
+                        ? <button className="bg-white p-1 rounded-lg"><i class="ri-shopping-cart-fill ri-2x"></i></button>
+                        : <button className="bg-white p-1 rounded-lg"><i class="ri-shopping-cart-line ri-2x"></i></button>
+
     return (
         <header className="w-full flex justify-between px-4 py-2 bg-header">
             <Link to="/">
@@ -13,7 +19,7 @@ export default function Header() {
                 </div>
             </Link>
             <Link to="/cart">
-                <button className="bg-white p-1 rounded-lg"><i class="ri-shopping-cart-line ri-2x"></i></button>
+                {cartLogo}
             </Link>
         </header>
     );

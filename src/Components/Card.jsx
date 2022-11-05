@@ -19,9 +19,9 @@ export default function Card(props) {
     function cartIcon(){
         const alreadyInCart = cartItems.some(product => product.id === id)
         if(alreadyInCart){
-            return <button><i className="ri-heart-fill ri-2x" onClick={() => removeFromCart(id)}></i></button>
+            return <button onClick={() => removeFromCart(id)}><i class="ri-indeterminate-circle-line ri-2x"></i></button>
         } else{
-            return <button><i className="ri-heart-line ri-2x" onClick={() => addToCart(props)}></i></button>
+            return <button  onClick={() => addToCart(props)}><i class="ri-add-circle-line ri-2x"></i></button>
         }
     }
     console.log(cartItems)

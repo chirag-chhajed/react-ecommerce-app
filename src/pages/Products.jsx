@@ -8,13 +8,6 @@ export default function Products(){
    const products = allProducts.map( product => (
     
     <Card 
-        // id={product.id}
-        // image={product.image}
-        // brand={product.brand} 
-        // description={product.description}
-        // price={product.price}
-        // isFavourite={product.isFavourite}
-        // alreadyInCart={product.alreadyInCart}
         {...product}
     />
    ))
