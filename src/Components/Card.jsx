@@ -8,14 +8,7 @@ export default function Card(props) {
     const heartIcon = isFavourite 
                             ? <button><i className="ri-heart-fill ri-2x" onClick={() => toggleFavorite(id)}></i></button>
                             : <button><i className="ri-heart-line ri-2x" onClick={() => toggleFavorite(id)}></i></button>
-    // function cartIcon(){
-    //     const alreadyInCart = cartItems.some(product => product.id === id)
-    //     if(alreadyInCart){
-    //         return <button><i className="ri-heart-fill ri-2x" onClick={() => removeFromCart(id)}></i></button>
-    //     } else {
-    //         return <button><i className="ri-heart-line ri-2x" onClick={() => addToCart(props)}></i></button>
-    //     }
-    // }
+                            
     function cartIcon(){
         const alreadyInCart = cartItems.some(product => product.id === id)
         if(alreadyInCart){
