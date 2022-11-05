@@ -17,7 +17,7 @@ export default function Products(){
    
    
     return(
-        <main className="flex flex-wrap gap-4 m-2">
+        <main className=" bg-headerfont">
             {products}
         </main>
     )

@@ -23,7 +23,7 @@ export default function Card(props) {
     return (
         <div key={id} className="h-96 w-72 bg-cardbg rounded-2xl pt-4 flex flex-col gap-4">
             <div className="h-40 w-64  mx-auto rounded-md">
-                <img src={image} className="h-full w-full object-contain " />
+                <img src={image} className="h-full w-full object-fill " />
             </div>
             <div className="text-center font-bold px-6">
                 <h2>{brand}</h2>
