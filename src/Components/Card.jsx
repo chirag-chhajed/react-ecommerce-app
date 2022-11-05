@@ -6,15 +6,15 @@ export default function Card(props) {
     const {brand,description,price,id,image,isFavourite} = props
     const {toggleFavorite,cartItems,addToCart,removeFromCart} = useContext(Context)
     const heartIcon = isFavourite 
-                            ? <button><i className="ri-heart-fill ri-2x" onClick={() => toggleFavorite(id)}></i></button>
-                            : <button><i className="ri-heart-line ri-2x" onClick={() => toggleFavorite(id)}></i></button>
+                            ? <i className="ri-heart-fill ri-2x" onClick={() => toggleFavorite(id)}></i>
+                            : <i className="ri-heart-line ri-2x" onClick={() => toggleFavorite(id)}></i>
                             
     function cartIcon(){
         const alreadyInCart = cartItems.some(product => product.id === id)
         if(alreadyInCart){
-            return <button onClick={() => removeFromCart(id)}><i class="ri-indeterminate-circle-line ri-2x"></i></button>
+            return <i onClick={() => removeFromCart(id)} class="ri-indeterminate-circle-line ri-2x"></i>
         } else{
-            return <button  onClick={() => addToCart(props)}><i class="ri-add-circle-line ri-2x"></i></button>
+            return <i onClick={() => addToCart(props)} class="ri-add-circle-line ri-2x"></i>
         }
     }
     console.log(cartItems)

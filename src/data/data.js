@@ -7,7 +7,7 @@ export default [
         brand: "Nike",
         description: "Air Jordan 1 Low SE Crater Grey University Blue",
         type: "Jordans Low",
-        price: "14,999",
+        price: "14999",
         isFavourite: false,
         
         id: nanoid()
@@ -17,7 +17,7 @@ export default [
         brand: "Nike",
         description: "Air Jordan 1 Low 'Pollen'",
         type: "Jordans Low",
-        price: "15,999",
+        price: "15999",
         isFavourite: false,
         
         id: nanoid()
@@ -27,7 +27,7 @@ export default [
         brand: "Nike",
         description: "Wmns Air Jordan 1 Low SE Utility 'White Black Red'",
         type: "Jordans Low",
-        price: "15,999",
+        price: "15999",
         isFavourite: false,
         
         id: nanoid()
@@ -37,7 +37,7 @@ export default [
         brand: "Nike",
         description: "Air Jordan 1 Low SE Arctic Punch",
         type: "Jordans Low",
-        price: "15,999",
+        price: "15999",
         isFavourite: false,
         
         id: nanoid()
@@ -47,7 +47,7 @@ export default [
         brand: "Nike",
         description: "Wmns Air Jordan 1 Low SE 'Light Mulberry'",
         type: "Jordans Low",
-        price: "16,499",
+        price: "16499",
         isFavourite: false,
         
         id: nanoid()
@@ -57,7 +57,7 @@ export default [
         brand: "Nike",
         description: "Wmns Air Jordan 1 Low 'Tropical Teal Sandy Beige'",
         type: "Jordans Low",
-        price: "16,999",
+        price: "16999",
         isFavourite: false,
         
         id: nanoid()
@@ -67,7 +67,7 @@ export default [
         brand: "Nike",
         description: "Air Jordan 1 Low 'Bulls'",
         type: "Jordans Low",
-        price: "19,999",
+        price: "19999",
         isFavourite: false,
         
         id: nanoid()
@@ -77,7 +77,7 @@ export default [
         brand: "Nike",
         description: "Air Jordan 1 Low SE 'Cyber Teal'",
         type: "Jordans Low",
-        price: "17,999",
+        price: "17999",
         isFavourite: false,
         
         id: nanoid()
@@ -87,7 +87,7 @@ export default [
         brand: "Nike",
         description: "Air Jordan 1 Low SE 'New Emerald'",
         type: "Jordans Low",
-        price: "17,999",
+        price: "17999",
         isFavourite: false,
         
         id: nanoid()
@@ -97,7 +97,7 @@ export default [
         brand: "Nike",
         description: "Wmns Air Jordan 1 Low 'Marina Blue'",
         type: "Jordans Low",
-        price: "17,999",
+        price: "17999",
         isFavourite: false,
         
         id: nanoid()
