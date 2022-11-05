@@ -4,7 +4,7 @@ import { Context } from "../Context";
 
 export default function Card(props) {
     const {brand,description,price,id,image,isFavourite} = props
-    const {toggleFavorite,addToCart,cartItems,removeFromCart} = useContext(Context)
+    const {toggleFavorite,cartItems,addToCart,removeFromCart} = useContext(Context)
     const heartIcon = isFavourite 
                             ? <button><i className="ri-heart-fill ri-2x" onClick={() => toggleFavorite(id)}></i></button>
                             : <button><i className="ri-heart-line ri-2x" onClick={() => toggleFavorite(id)}></i></button>
@@ -16,6 +16,17 @@ export default function Card(props) {
     //         return <button><i className="ri-heart-line ri-2x" onClick={() => addToCart(props)}></i></button>
     //     }
     // }
+    function cartIcon(){
+        const alreadyInCart = cartItems.some(product => product.id === id)
+        if(alreadyInCart){
+            return <button><i className="ri-heart-fill ri-2x" onClick={() => removeFromCart(id)}></i></button>
+        } else{
+            return <button><i className="ri-heart-line ri-2x" onClick={() => addToCart(props)}></i></button>
+        }
+    }
+    console.log(cartItems)
+        
+    
     return (
         <div key={id} className="h-96 w-72 bg-cardbg rounded-2xl pt-4 flex flex-col gap-4">
             <div className="h-40 w-64  mx-auto rounded-md">
@@ -29,9 +40,7 @@ export default function Card(props) {
             </div>
             <div className="flex gap-4 justify-center">
                 {heartIcon}
-                {/* {cartIcon()} */}
-                <button><i class="ri-add-circle-line ri-2x"></i></button>
-                
+                {cartIcon()} 
             </div>
 
         </div>
