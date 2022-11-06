@@ -9,11 +9,12 @@ module.exports = {
       }
     },
     colors:{
-      header: "#344e41",
+      header: "#2b2d42",
       headerfont: "#dad7cd",
-      main: "#588157",
       cardbg: "#a3b18a",
-      background: "#c7f9cc"
+      background: "#e0e1dd",
+      white: "#ffffff",
+      black: "#000000"
     }
   },
   plugins: [],

@@ -17,7 +17,7 @@ export default function Products(){
    
    
     return(
-        <main className=" bg-headerfont">
+        <main className=" bg-background">
             {products}
         </main>
     )

@@ -27,8 +27,9 @@ export default function Cart() {
     //                     : 
     return (
         <>
+            
             {
-                cartItems.length == 0
+                cartItems.length === 0
                 &&
                 <h2>You have no items in your cart <br />😞😞😞</h2>
             }

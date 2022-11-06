@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import { Routes, Route } from "react-router-dom"
 import Products from "./pages/Products"
 import Cart from "./pages/Cart"
+// import Filter from "./Components/Filter";
 
 function App() {
   useEffect(() => {
@@ -21,7 +22,7 @@ function App() {
   return (
     <>
       <Header />
-      
+      {/* <Filter/> */}
       <Routes>
         <Route path="/" element={<Products/>} />
         <Route path="/cart" element={<Cart/>} />

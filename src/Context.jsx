@@ -27,6 +27,14 @@ function ContextProvider({children}){
     function emptyCart(){
         setCartItems([])
     }
+    function filterCart(type){
+        let updatedArr = [...allProducts]
+        setAllProducts(updatedArr.filter(product => product.type === type))
+    }
+    function all(){
+        
+        setAllProducts(allProducts)
+    }
     return(
         <Context.Provider value={{
             allProducts,
@@ -35,7 +43,9 @@ function ContextProvider({children}){
             cartItems,
             addToCart,
             removeFromCart,
-            emptyCart
+            emptyCart,
+            filterCart,
+            all
         }}>
             {children}
         </Context.Provider>
