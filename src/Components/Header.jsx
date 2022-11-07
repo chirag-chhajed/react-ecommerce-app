@@ -7,8 +7,8 @@ export default function Header() {
     const {cartItems} = useContext(Context)
     
     const cartLogo = cartItems.length > 0 
-                        ? <i class="ri-shopping-cart-fill ri-2x"></i>
-                        : <i class="ri-shopping-cart-line ri-2x"></i>
+                        ? <i className="ri-shopping-cart-fill ri-2x white"></i>
+                        : <i className="ri-shopping-cart-line ri-2x white"></i>
 
     return (
         <header className="w-full flex justify-between px-4 py-2 bg-header sticky top-0">
