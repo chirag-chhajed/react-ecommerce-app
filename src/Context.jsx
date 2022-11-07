@@ -1,41 +1,40 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import data from "./data/data";
 
 const Context = React.createContext()
 
-function ContextProvider({children}){
-    const [allProducts,setAllProducts] = useState(data)
-    const [cartItems,setCartItems] = useState([])
+function ContextProvider({ children }) {
+    const [allProducts, setAllProducts] = useState(data)
+    const [cartItems, setCartItems] = useState([])
 
-    function toggleFavorite(id){
+    function toggleFavorite(id) {
 
         const updatedArr = allProducts.map(product => {
-            if(product.id === id){
-                
-                return{...product,isFavourite: !product.isFavourite}
+            if (product.id === id) {
+
+                return { ...product, isFavourite: !product.isFavourite }
             }
             return product
         })
         setAllProducts(updatedArr)
     }
-    function addToCart(newProd){
-        setCartItems(prevProd => [...prevProd,newProd])
+    function addToCart(newProd) {
+        setCartItems(prevProd => [...prevProd, newProd])
     }
-    function removeFromCart(id){
+    function removeFromCart(id) {
         setCartItems(prevProd => prevProd.filter(product => product.id !== id))
     }
-    function emptyCart(){
+    function emptyCart() {
         setCartItems([])
     }
-    function filterCart(type){
+    function filterCart(type) {
         let updatedArr = [...allProducts]
         setAllProducts(updatedArr.filter(product => product.type === type))
     }
-    function all(){
-        
+    function all() {
         setAllProducts(allProducts)
     }
-    return(
+    return (
         <Context.Provider value={{
             allProducts,
             setAllProducts,
@@ -52,4 +51,4 @@ function ContextProvider({children}){
     )
 }
 
-export {ContextProvider,Context}
+export { ContextProvider, Context }

@@ -4,11 +4,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
-      fontFamily:{
-        raleway: ["raleway","sanserif"]
+      fontFamily: {
+        raleway: ["raleway", "sanserif"]
       }
     },
-    colors:{
+    colors: {
       header: "#2b2d42",
       headerfont: "#dad7cd",
       cardbg: "#4a4e69",

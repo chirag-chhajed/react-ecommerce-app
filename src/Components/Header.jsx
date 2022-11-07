@@ -1,14 +1,14 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import Shoe from '../assets/shoe.png'
 import { Link } from "react-router-dom";
 import { Context } from "../Context";
 
 export default function Header() {
-    const {cartItems} = useContext(Context)
-    
-    const cartLogo = cartItems.length > 0 
-                        ? <i className="ri-shopping-cart-fill ri-2x white"></i>
-                        : <i className="ri-shopping-cart-line ri-2x white"></i>
+    const { cartItems } = useContext(Context)
+
+    const cartLogo = cartItems.length > 0
+        ? <i className="ri-shopping-cart-fill ri-2x white"></i>
+        : <i className="ri-shopping-cart-line ri-2x white"></i>
 
     return (
         <header className="w-full flex justify-between px-4 py-2 bg-header sticky top-0">

@@ -24,8 +24,8 @@ function App() {
       <Header />
       {/* <Filter/> */}
       <Routes>
-        <Route path="/" element={<Products/>} />
-        <Route path="/cart" element={<Cart/>} />
+        <Route path="/" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </>
   );

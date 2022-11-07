@@ -14,20 +14,19 @@ export default function Cart() {
     const totalprice = cartItems.map(e => e.price).reduce(
         (a, b) => parseInt(a) + parseInt(b)
     )
-    function placeOrder(){
+    function placeOrder() {
         setButtonText("Ordering")
-        setTimeout(()=>{
+        setTimeout(() => {
             setButtonText("Place Order")
             emptyCart()
-        },4000)
+        }, 4000)
     }
-    console.log(totalprice)
     // const display = cartItems.length > 0 
     //                     ? ` ${cartProducts}`
     //                     : 
     return (
         <>
-            
+
             {
                 cartItems.length === 0
                 &&
@@ -37,15 +36,15 @@ export default function Cart() {
                 cartItems.length > 0
                 &&
                 <>
-                <div className="grid grid-cols-3 text-center font-bold my-4">
-                    <h3>Product Image</h3>
-                    <h3>Description</h3>
-                    <h3>Price</h3>
-                </div>
-                {cartProducts}
+                    <div className="grid grid-cols-3 text-center font-bold my-4">
+                        <h3>Product Image</h3>
+                        <h3>Description</h3>
+                        <h3>Price</h3>
+                    </div>
+                    {cartProducts}
                 </>
             }
-            
+
             {
                 cartItems.length > 0
                 &&
@@ -58,7 +57,7 @@ export default function Cart() {
                             </span>
                         </button>
                     </div>
-                    
+
                 </>
             }
         </>
