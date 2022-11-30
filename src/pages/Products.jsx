@@ -10,7 +10,7 @@ export default function Products() {
     //   }
     const { allProducts } = useContext(Context)
     const products = allProducts.map(product => (
-
+        
         <Card
             {...product}
         />
