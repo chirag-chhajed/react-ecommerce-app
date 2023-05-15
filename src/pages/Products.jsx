@@ -12,13 +12,14 @@ export default function Products() {
     const products = allProducts.map(product => (
         
         <Card
+            key={product.id}
             {...product}
         />
     ))
 
 
     return (
-        <main className=" bg-background">
+        <main className="bg-background">
             {products}
         </main>
     )

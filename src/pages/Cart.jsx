@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import CartItem from "../Components/CartItem";
 import { Context } from "../Context";
 import Confetti from 'react-confetti'
@@ -13,6 +13,7 @@ export default function Cart() {
             {...e}
         />
     ))
+    console.log(cartItems)
     // const priceArray = cartItems.map(e => e.price)
     const initialValue = 0
     const totalprice = cartItems.map(e => e.price).reduce(
@@ -42,7 +43,7 @@ export default function Cart() {
                 cartItems.length > 0
                 &&
                 <>
-                    <div className="grid grid-cols-3 text-center font-bold my-4">
+                    <div className="grid grid-cols-3 my-4 font-bold text-center">
                         <h3>Product Image</h3>
                         <h3>Description</h3>
                         <h3>Price</h3>
@@ -56,10 +57,10 @@ export default function Cart() {
                 &&
                 <>
                     {confetti && <Confetti/>}
-                    <div className="text-right mx-8 font-bold">Total Price: Rs. {totalprice}</div>
-                    <div className="text-center my-8">
+                    <div className="mx-8 font-bold text-right">Total Price: Rs. {totalprice}</div>
+                    <div className="my-8 text-center">
                         <button onClick={placeOrder}>
-                            <span class="button_top">
+                            <span className="button_top">
                                 {buttonText}
                             </span>
                         </button>

@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import { Routes, Route } from "react-router-dom"
 import Products from "./pages/Products"
 import Cart from "./pages/Cart"
+import Favourites from "./pages/Favourites";
 // import Filter from "./Components/Filter";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       {/* <Filter/> */}
       <Routes>
         <Route path="/" element={<Products />} />
+        <Route path="/favourites" element={<Favourites />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </>

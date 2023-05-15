@@ -6,6 +6,7 @@ const Context = React.createContext()
 function ContextProvider({ children }) {
     const [allProducts, setAllProducts] = useState(data)
     const [cartItems, setCartItems] = useState([])
+    const [favourites, setFavourites] = useState([])
 
     function toggleFavorite(id) {
 
@@ -17,6 +18,7 @@ function ContextProvider({ children }) {
             return product
         })
         setAllProducts(updatedArr)
+        setFavourites(updatedArr.filter(product => product.isFavourite === true))
     }
     function addToCart(newProd) {
         setCartItems(prevProd => [...prevProd, newProd])
@@ -34,21 +36,27 @@ function ContextProvider({ children }) {
     function all() {
         setAllProducts(allProducts)
     }
+    // function favourites() {
+    //     return allProducts.filter(product => product.isFavourite === true)
+    // }
     return (
-        <Context.Provider value={{
-            allProducts,
-            setAllProducts,
-            toggleFavorite,
-            cartItems,
-            addToCart,
-            removeFromCart,
-            emptyCart,
-            filterCart,
-            all
-        }}>
-            {children}
-        </Context.Provider>
-    )
+      <Context.Provider
+        value={{
+          allProducts,
+          setAllProducts,
+          toggleFavorite,
+          cartItems,
+          addToCart,
+          removeFromCart,
+          emptyCart,
+          filterCart,
+          all,
+          favourites,
+        }}
+      >
+        {children}
+      </Context.Provider>
+    );
 }
 
 export { ContextProvider, Context }
