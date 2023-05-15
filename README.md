@@ -1,3 +1,3 @@
 # react-ecommerce-app
 
-![img](./public/img.jpg)
+![img](./public/assets/Fg8nRegUcAA84ey.jpg)
